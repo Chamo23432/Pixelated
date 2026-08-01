@@ -7,12 +7,12 @@
 <link rel="icon" type="image/png" href="assets/icon/logo.png">
 <link rel="stylesheet" href="css/style.css">
 <style>
-  .store-tabs{display:flex;gap:8px;justify-content:center;margin-bottom:40px;flex-wrap:wrap;}
+  .store-tabs{display:flex;gap:8px;justify-content:center;margin-bottom:36px;flex-wrap:wrap;}
   .store-tab{padding:10px 20px;border-radius:10px;border:1px solid var(--panel-border);background:none;color:var(--text-dim);cursor:pointer;font-size:0.88rem;font-weight:600;}
   .store-tab.active{color:#fff;border-color:var(--blue-2);background:rgba(63,107,255,0.12);}
-  .brand-filter{display:flex;gap:8px;justify-content:center;margin-bottom:36px;flex-wrap:wrap;}
-  .brand-chip{font-size:0.76rem;padding:6px 14px;border-radius:999px;border:1px solid var(--panel-border);color:var(--text-faint);cursor:pointer;background:none;}
-  .brand-chip.active{color:#fff;border-color:var(--blue-2);}
+  .app-filter{display:flex;gap:8px;justify-content:center;margin-bottom:36px;flex-wrap:wrap;}
+  .app-chip{font-size:0.78rem;padding:7px 16px;border-radius:999px;border:1px solid var(--panel-border);color:var(--text-faint);cursor:pointer;background:none;}
+  .app-chip.active{color:#fff;border-color:var(--blue-2);background:rgba(63,107,255,0.1);}
 
   .theme-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;max-width:1100px;margin:0 auto;}
   .theme-card{background:var(--panel);border:1px solid var(--panel-border);border-radius:16px;padding:20px;transition:transform .2s ease,border-color .2s ease;}
@@ -21,10 +21,10 @@
   .theme-preview span{flex:1;}
   .theme-app-tag{font-size:0.68rem;padding:3px 9px;border-radius:999px;background:rgba(63,107,255,0.12);color:#7fb4ff;display:inline-block;margin-bottom:10px;}
   .theme-card h3{font-size:1rem;color:#fff;margin-bottom:6px;}
-  .theme-card p{color:var(--text-dim);font-size:0.82rem;margin-bottom:16px;}
-  .apply-btn{width:100%;background:var(--grad);border:none;color:#fff;padding:9px;border-radius:9px;font-weight:600;font-size:0.82rem;cursor:pointer;}
-  .apply-btn.applied{background:var(--panel2);color:var(--text-dim);cursor:default;}
-  .store-note{max-width:640px;margin:0 auto 40px;text-align:center;padding:14px 18px;border:1px dashed var(--panel-border);border-radius:12px;font-size:0.82rem;color:var(--text-faint);}
+  .theme-card p{color:var(--text-dim);font-size:0.82rem;margin-bottom:16px;min-height:34px;}
+  .dl-theme-btn{width:100%;background:var(--panel2);border:1px solid var(--panel-border);color:var(--text);padding:9px;border-radius:9px;font-weight:600;font-size:0.82rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;}
+  .dl-theme-btn:hover{border-color:#3a4358;}
+  .store-note{max-width:680px;margin:0 auto 40px;text-align:center;padding:16px 20px;border:1px dashed var(--panel-border);border-radius:12px;font-size:0.84rem;color:var(--text-faint);line-height:1.6;}
 </style>
 </head>
 <body>
@@ -56,32 +56,31 @@
   <section class="page-hero">
     <div class="wrap">
       <h1>Pixel Web Store</h1>
-      <p>Browse everything Pixelated makes — apps, games, PixelOS builds — and pick a theme for any app.</p>
+      <p>Themes for your apps, and mods for Pixelated Studios games. Looking for the apps themselves? Head to <a href="downloads/index.html" style="color:var(--blue);">Downloads</a>.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
       <div class="store-tabs">
-        <button class="store-tab active" data-tab="downloads" onclick="switchStoreTab('downloads')">Apps &amp; Downloads</button>
-        <button class="store-tab" data-tab="themes" onclick="switchStoreTab('themes')">Themes</button>
+        <button class="store-tab active" data-tab="themes" onclick="switchStoreTab('themes')">Themes</button>
+        <button class="store-tab" data-tab="mods" onclick="switchStoreTab('mods')">Mods</button>
       </div>
 
-      <div id="downloadsPanel">
-        <div class="brand-filter">
-          <button class="brand-chip active" data-brand="all" onclick="setBrandFilter('all')">All</button>
-          <button class="brand-chip" data-brand="pixelated" onclick="setBrandFilter('pixelated')">Pixelated</button>
-          <button class="brand-chip" data-brand="sedico13" onclick="setBrandFilter('sedico13')">Sedico13</button>
-          <button class="brand-chip" data-brand="studios" onclick="setBrandFilter('studios')">Pixelated Studios</button>
+      <div id="themesPanel">
+        <div class="store-note">Download a theme, then open the app it's for → Settings → drag the file into the theme box. It's added to your library and only works in that one app.</div>
+        <div class="app-filter" id="appFilter">
+          <button class="app-chip active" data-app="all" onclick="setAppFilter('all')">All Apps</button>
+          <button class="app-chip" data-app="jot" onclick="setAppFilter('jot')">Jot</button>
+          <button class="app-chip" data-app="fileflow" onclick="setAppFilter('fileflow')">FileFlow</button>
+          <button class="app-chip" data-app="lens" onclick="setAppFilter('lens')">Lens</button>
         </div>
-        <div id="store-app-list" class="app-list">
-          <div class="state-msg">Loading…</div>
-        </div>
-      </div>
-
-      <div id="themesPanel" style="display:none;">
-        <div class="store-note">Pick a theme for any app below — it's saved right away. Open that app on this device and the theme will already be applied.</div>
         <div class="theme-grid" id="theme-grid"></div>
+      </div>
+
+      <div id="modsPanel" style="display:none;">
+        <div class="store-note">Mods for Pixelated Studios games will show up here once titles are released.</div>
+        <div class="app-list" id="mods-list"></div>
       </div>
     </div>
   </section>
@@ -98,66 +97,36 @@
 
 <script src="js/manifest-loader.js"></script>
 <script>
-let allBrandApps = [];
-
-async function loadAllBrands(){
-  const [pixelated, sedico13, studios] = await Promise.all([
-    fetch('data/pixelated/manifest.json').then(r => r.ok ? r.json() : []).catch(() => []),
-    fetch('data/sedico13/manifest.json').then(r => r.ok ? r.json() : []).catch(() => []),
-    fetch('data/pixelated-studios/manifest.json').then(r => r.ok ? r.json() : []).catch(() => [])
-  ]);
-  allBrandApps = [
-    ...pixelated.map(a => ({...a, _brand: 'pixelated'})),
-    ...sedico13.map(a => ({...a, _brand: 'sedico13'})),
-    ...studios.map(a => ({...a, _brand: 'studios'}))
-  ];
-  renderStoreApps('all');
-}
-
-function setBrandFilter(brand){
-  document.querySelectorAll('.brand-chip').forEach(c => c.classList.toggle('active', c.dataset.brand === brand));
-  renderStoreApps(brand);
-}
-
-function renderStoreApps(brand){
-  const list = document.getElementById('store-app-list');
-  const items = brand === 'all' ? allBrandApps : allBrandApps.filter(a => a._brand === brand);
-  if(!items.length){
-    list.innerHTML = `<div class="coming-soon">Nothing here yet — check back soon.</div>`;
-    return;
-  }
-  list.innerHTML = items.map(renderAppCard).join("");
-}
+let allThemesData = [];
+let currentAppFilter = 'all';
 
 function switchStoreTab(tab){
   document.querySelectorAll('.store-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tab));
-  document.getElementById('downloadsPanel').style.display = tab === 'downloads' ? 'block' : 'none';
   document.getElementById('themesPanel').style.display = tab === 'themes' ? 'block' : 'none';
+  document.getElementById('modsPanel').style.display = tab === 'mods' ? 'block' : 'none';
+  if(tab === 'mods') loadManifest('data/mods/manifest.json', 'mods-list');
 }
 
-/* ---------- Themes ---------- */
-const APP_THEME_KEYS = {
-  jot: 'pixelated_notes_theme',
-  fileflow: 'pixelated_converter_theme',
-  lens: 'pixelated_imagetools_theme'
-};
+function setAppFilter(app){
+  currentAppFilter = app;
+  document.querySelectorAll('.app-chip').forEach(c => c.classList.toggle('active', c.dataset.app === app));
+  renderThemes();
+}
 
 async function loadThemes(){
   try{
     const res = await fetch('data/themes/manifest.json');
-    const themes = res.ok ? await res.json() : [];
-    document.getElementById('theme-grid').innerHTML = themes.map(renderThemeCard).join("") ||
-      `<div class="coming-soon">No themes published yet.</div>`;
+    allThemesData = res.ok ? await res.json() : [];
+    renderThemes();
   }catch(err){
     console.error(err);
-    document.getElementById('theme-grid').innerHTML = `<div class="state-msg">Couldn't load themes right now.</div>`;
+    document.getElementById('theme-grid').innerHTML = `<div class="coming-soon">Couldn't load themes right now.</div>`;
   }
 }
 
-function renderThemeCard(t){
-  const key = APP_THEME_KEYS[t.app];
-  const isApplied = key && localStorage.getItem(key) === t.id;
-  return `
+function renderThemes(){
+  const items = currentAppFilter === 'all' ? allThemesData : allThemesData.filter(t => t.app === currentAppFilter);
+  document.getElementById('theme-grid').innerHTML = items.map(t => `
     <div class="theme-card">
       <div class="theme-preview">
         <span style="background:${t.preview.bg}"></span>
@@ -167,29 +136,14 @@ function renderThemeCard(t){
       <span class="theme-app-tag">${t.appName}</span>
       <h3>${t.name}</h3>
       <p>${t.description}</p>
-      <button class="apply-btn ${isApplied?'applied':''}" onclick="applyStoreTheme('${t.id}')" ${isApplied?'disabled':''}>${isApplied ? '✓ Applied' : 'Set as ' + t.appName + ' theme'}</button>
+      <a href="${t.downloadUrl}" download class="dl-theme-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
+        Download theme
+      </a>
     </div>
-  `;
+  `).join("") || `<div class="coming-soon">No themes for this app yet.</div>`;
 }
 
-async function applyStoreTheme(themeId){
-  const res = await fetch('data/themes/manifest.json');
-  const themes = await res.json();
-  const theme = themes.find(t => t.id === themeId);
-  if(!theme) return;
-  const key = APP_THEME_KEYS[theme.app];
-  if(!key) return;
-  localStorage.setItem(key, theme.id);
-  // Also stash the theme's variable set under a lookup themes can read
-  // if the app doesn't already ship this exact theme id built-in.
-  const storeThemesRaw = localStorage.getItem('pixelated_store_themes') || '{}';
-  const storeThemes = JSON.parse(storeThemesRaw);
-  storeThemes[theme.id] = theme.vars;
-  localStorage.setItem('pixelated_store_themes', JSON.stringify(storeThemes));
-  loadThemes();
-}
-
-loadAllBrands();
 loadThemes();
 </script>
 </body>

@@ -1,38 +1,268 @@
 [
   {
-    "id": "jot-futuristic",
-    "name": "Futuristic",
-    "app": "jot",
-    "appName": "Jot",
-    "description": "A sleek neon look for Jot — cyan glow on deep space black.",
-    "preview": { "bg":"#04070d", "accent1":"#00f0ff", "accent2":"#0080ff", "accent3":"#7b2fff" },
-    "vars": { "--bg":"#04070d","--panel":"#080d16","--panel2":"#0c1420","--border":"#132132","--text":"#e6fbff","--dim":"#7fa3b8","--accent1":"#00f0ff","--accent2":"#0080ff","--accent3":"#7b2fff" }
-  },
-  {
     "id": "jot-anime",
     "name": "Anime Pop",
     "app": "jot",
     "appName": "Jot",
-    "description": "Sakura pink and sky blue for Jot.",
-    "preview": { "bg":"#0f0a14", "accent1":"#ff6fb0", "accent2":"#ff9ecb", "accent3":"#7dd3fc" },
-    "vars": { "--bg":"#0f0a14","--panel":"#1a1122","--panel2":"#22182c","--border":"#3a2748","--text":"#fdeeff","--dim":"#c9a3d8","--accent1":"#ff6fb0","--accent2":"#ff9ecb","--accent3":"#7dd3fc" }
+    "description": "Sakura pink and sky blue",
+    "preview": {
+      "bg": "#0f0a14",
+      "accent1": "#ff6fb0",
+      "accent2": "#ff9ecb",
+      "accent3": "#7dd3fc"
+    },
+    "downloadUrl": "assets/individual-themes/jot/jot-anime.json"
+  },
+  {
+    "id": "jot-forest",
+    "name": "Forest",
+    "app": "jot",
+    "appName": "Jot",
+    "description": "Calm greens for focused writing",
+    "preview": {
+      "bg": "#0a120d",
+      "accent1": "#34d399",
+      "accent2": "#22c55e",
+      "accent3": "#a3e635"
+    },
+    "downloadUrl": "assets/individual-themes/jot/jot-forest.json"
+  },
+  {
+    "id": "jot-future",
+    "name": "Future",
+    "app": "jot",
+    "appName": "Jot",
+    "description": "Neon cyan on deep space black",
+    "preview": {
+      "bg": "#04070d",
+      "accent1": "#00f0ff",
+      "accent2": "#0080ff",
+      "accent3": "#7b2fff"
+    },
+    "downloadUrl": "assets/individual-themes/jot/jot-future.json"
+  },
+  {
+    "id": "jot-lavender",
+    "name": "Lavender Dream",
+    "app": "jot",
+    "appName": "Jot",
+    "description": "Soft purples, easy on the eyes",
+    "preview": {
+      "bg": "#0c0a14",
+      "accent1": "#c4b5fd",
+      "accent2": "#a78bfa",
+      "accent3": "#8b5cf6"
+    },
+    "downloadUrl": "assets/individual-themes/jot/jot-lavender.json"
+  },
+  {
+    "id": "jot-mono",
+    "name": "Monochrome",
+    "app": "jot",
+    "appName": "Jot",
+    "description": "Pure grayscale, zero distractions",
+    "preview": {
+      "bg": "#000000",
+      "accent1": "#ffffff",
+      "accent2": "#cccccc",
+      "accent3": "#999999"
+    },
+    "downloadUrl": "assets/individual-themes/jot/jot-mono.json"
+  },
+  {
+    "id": "jot-ocean",
+    "name": "Ocean",
+    "app": "jot",
+    "appName": "Jot",
+    "description": "Deep teal and aqua",
+    "preview": {
+      "bg": "#020e12",
+      "accent1": "#22d3ee",
+      "accent2": "#06b6d4",
+      "accent3": "#0891b2"
+    },
+    "downloadUrl": "assets/individual-themes/jot/jot-ocean.json"
+  },
+  {
+    "id": "jot-sunset",
+    "name": "Sunset",
+    "app": "jot",
+    "appName": "Jot",
+    "description": "Warm oranges and deep reds",
+    "preview": {
+      "bg": "#0d0705",
+      "accent1": "#ffb347",
+      "accent2": "#ff6b35",
+      "accent3": "#e63946"
+    },
+    "downloadUrl": "assets/individual-themes/jot/jot-sunset.json"
+  },
+  {
+    "id": "fileflow-crimson",
+    "name": "Crimson",
+    "app": "fileflow",
+    "appName": "FileFlow",
+    "description": "Bold reds for high-contrast work",
+    "preview": {
+      "bg": "#0d0505",
+      "accent1": "#f87171",
+      "accent2": "#ef4444",
+      "accent3": "#dc2626"
+    },
+    "downloadUrl": "assets/individual-themes/fileflow/fileflow-crimson.json"
   },
   {
     "id": "fileflow-forest",
     "name": "Forest",
     "app": "fileflow",
     "appName": "FileFlow",
-    "description": "Calm greens for FileFlow — easy on the eyes during long conversion sessions.",
-    "preview": { "bg":"#0a120d", "accent1":"#34d399", "accent2":"#22c55e", "accent3":"#a3e635" },
-    "vars": { "--bg":"#0a120d","--panel":"#101c14","--panel2":"#15251a","--border":"#213a29","--text":"#eaf5ec","--dim":"#8ba896","--accent1":"#34d399","--accent2":"#22c55e","--accent3":"#a3e635" }
+    "description": "Calm greens for long conversion sessions",
+    "preview": {
+      "bg": "#0a120d",
+      "accent1": "#34d399",
+      "accent2": "#22c55e",
+      "accent3": "#a3e635"
+    },
+    "downloadUrl": "assets/individual-themes/fileflow/fileflow-forest.json"
+  },
+  {
+    "id": "fileflow-ice",
+    "name": "Ice",
+    "app": "fileflow",
+    "appName": "FileFlow",
+    "description": "Cool blues and crisp whites",
+    "preview": {
+      "bg": "#050a0f",
+      "accent1": "#7dd3fc",
+      "accent2": "#38bdf8",
+      "accent3": "#0ea5e9"
+    },
+    "downloadUrl": "assets/individual-themes/fileflow/fileflow-ice.json"
+  },
+  {
+    "id": "fileflow-industrial",
+    "name": "Industrial",
+    "app": "fileflow",
+    "appName": "FileFlow",
+    "description": "Steel gray with amber accents",
+    "preview": {
+      "bg": "#0a0a0b",
+      "accent1": "#fbbf24",
+      "accent2": "#f59e0b",
+      "accent3": "#d97706"
+    },
+    "downloadUrl": "assets/individual-themes/fileflow/fileflow-industrial.json"
+  },
+  {
+    "id": "fileflow-mint",
+    "name": "Mint",
+    "app": "fileflow",
+    "appName": "FileFlow",
+    "description": "Fresh and light greens",
+    "preview": {
+      "bg": "#f2fbf7",
+      "accent1": "#34d399",
+      "accent2": "#10b981",
+      "accent3": "#059669"
+    },
+    "downloadUrl": "assets/individual-themes/fileflow/fileflow-mint.json"
+  },
+  {
+    "id": "fileflow-mono",
+    "name": "Monochrome",
+    "app": "fileflow",
+    "appName": "FileFlow",
+    "description": "Pure grayscale, zero distractions",
+    "preview": {
+      "bg": "#000000",
+      "accent1": "#ffffff",
+      "accent2": "#cccccc",
+      "accent3": "#999999"
+    },
+    "downloadUrl": "assets/individual-themes/fileflow/fileflow-mono.json"
+  },
+  {
+    "id": "lens-arctic",
+    "name": "Arctic",
+    "app": "lens",
+    "appName": "Lens",
+    "description": "Icy blues and whites",
+    "preview": {
+      "bg": "#050a0f",
+      "accent1": "#7dd3fc",
+      "accent2": "#38bdf8",
+      "accent3": "#0ea5e9"
+    },
+    "downloadUrl": "assets/individual-themes/lens/lens-arctic.json"
+  },
+  {
+    "id": "lens-darkroom",
+    "name": "Darkroom",
+    "app": "lens",
+    "appName": "Lens",
+    "description": "Deep black, red safelight accent",
+    "preview": {
+      "bg": "#000000",
+      "accent1": "#ff4d4d",
+      "accent2": "#e63939",
+      "accent3": "#c92a2a"
+    },
+    "downloadUrl": "assets/individual-themes/lens/lens-darkroom.json"
+  },
+  {
+    "id": "lens-gold",
+    "name": "Gold Hour",
+    "app": "lens",
+    "appName": "Lens",
+    "description": "Warm golden tones for photo editors",
+    "preview": {
+      "bg": "#0d0a05",
+      "accent1": "#fbbf24",
+      "accent2": "#f59e0b",
+      "accent3": "#d97706"
+    },
+    "downloadUrl": "assets/individual-themes/lens/lens-gold.json"
   },
   {
     "id": "lens-light",
     "name": "Light",
     "app": "lens",
     "appName": "Lens",
-    "description": "Clean, bright workspace for Lens — great for color-accurate editing.",
-    "preview": { "bg":"#f7f8fb", "accent1":"#0ea5e9", "accent2":"#3b6bff", "accent3":"#8b5cf6" },
-    "vars": { "--bg":"#f7f8fb","--panel":"#ffffff","--panel2":"#f0f2f7","--border":"#e2e5ec","--text":"#161a22","--dim":"#6b7280","--accent1":"#0ea5e9","--accent2":"#3b6bff","--accent3":"#8b5cf6" }
+    "description": "Clean bright workspace for color-accurate editing",
+    "preview": {
+      "bg": "#f7f8fb",
+      "accent1": "#0ea5e9",
+      "accent2": "#3b6bff",
+      "accent3": "#8b5cf6"
+    },
+    "downloadUrl": "assets/individual-themes/lens/lens-light.json"
+  },
+  {
+    "id": "lens-mono",
+    "name": "Monochrome",
+    "app": "lens",
+    "appName": "Lens",
+    "description": "Pure grayscale, zero distractions",
+    "preview": {
+      "bg": "#000000",
+      "accent1": "#ffffff",
+      "accent2": "#cccccc",
+      "accent3": "#999999"
+    },
+    "downloadUrl": "assets/individual-themes/lens/lens-mono.json"
+  },
+  {
+    "id": "lens-violet",
+    "name": "Violet",
+    "app": "lens",
+    "appName": "Lens",
+    "description": "Rich purples for a creative studio feel",
+    "preview": {
+      "bg": "#0a0512",
+      "accent1": "#c084fc",
+      "accent2": "#a855f7",
+      "accent3": "#7c3aed"
+    },
+    "downloadUrl": "assets/individual-themes/lens/lens-violet.json"
   }
 ]
