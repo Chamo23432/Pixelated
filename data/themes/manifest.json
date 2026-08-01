@@ -1,0 +1,38 @@
+[
+  {
+    "id": "jot-futuristic",
+    "name": "Futuristic",
+    "app": "jot",
+    "appName": "Jot",
+    "description": "A sleek neon look for Jot — cyan glow on deep space black.",
+    "preview": { "bg":"#04070d", "accent1":"#00f0ff", "accent2":"#0080ff", "accent3":"#7b2fff" },
+    "vars": { "--bg":"#04070d","--panel":"#080d16","--panel2":"#0c1420","--border":"#132132","--text":"#e6fbff","--dim":"#7fa3b8","--accent1":"#00f0ff","--accent2":"#0080ff","--accent3":"#7b2fff" }
+  },
+  {
+    "id": "jot-anime",
+    "name": "Anime Pop",
+    "app": "jot",
+    "appName": "Jot",
+    "description": "Sakura pink and sky blue for Jot.",
+    "preview": { "bg":"#0f0a14", "accent1":"#ff6fb0", "accent2":"#ff9ecb", "accent3":"#7dd3fc" },
+    "vars": { "--bg":"#0f0a14","--panel":"#1a1122","--panel2":"#22182c","--border":"#3a2748","--text":"#fdeeff","--dim":"#c9a3d8","--accent1":"#ff6fb0","--accent2":"#ff9ecb","--accent3":"#7dd3fc" }
+  },
+  {
+    "id": "fileflow-forest",
+    "name": "Forest",
+    "app": "fileflow",
+    "appName": "FileFlow",
+    "description": "Calm greens for FileFlow — easy on the eyes during long conversion sessions.",
+    "preview": { "bg":"#0a120d", "accent1":"#34d399", "accent2":"#22c55e", "accent3":"#a3e635" },
+    "vars": { "--bg":"#0a120d","--panel":"#101c14","--panel2":"#15251a","--border":"#213a29","--text":"#eaf5ec","--dim":"#8ba896","--accent1":"#34d399","--accent2":"#22c55e","--accent3":"#a3e635" }
+  },
+  {
+    "id": "lens-light",
+    "name": "Light",
+    "app": "lens",
+    "appName": "Lens",
+    "description": "Clean, bright workspace for Lens — great for color-accurate editing.",
+    "preview": { "bg":"#f7f8fb", "accent1":"#0ea5e9", "accent2":"#3b6bff", "accent3":"#8b5cf6" },
+    "vars": { "--bg":"#f7f8fb","--panel":"#ffffff","--panel2":"#f0f2f7","--border":"#e2e5ec","--text":"#161a22","--dim":"#6b7280","--accent1":"#0ea5e9","--accent2":"#3b6bff","--accent3":"#8b5cf6" }
+  }
+]

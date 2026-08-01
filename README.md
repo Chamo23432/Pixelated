@@ -1,100 +1,86 @@
 # Pixelated — Site Structure
 
+## Adding a new download (drop-in system)
+
+Each brand has its own folder under `data/`:
+
 ```
-pixelated/
-├── index.html              → Home page
-├── products.html             → Products page (5 fixed categories)
-├── about.html                 → About page
-├── contact.html                → Contact page
-├── downloads/
-│   └── index.html             → Downloads page (auto-generated from data/apps.json)
-├── data/
-│   └── apps.json                → EDIT THIS to add/change/remove apps and download links
-├── assets/
-│   ├── icon/
-│   │   ├── logo.svg              → Logo source (for reference/editing)
-│   │   └── logo.png                → Used ONLY as the browser tab favicon
-│   └── app-icons/
-│       └── (your app icons)        → Icons for each app shown on the Downloads page
-├── css/
-│   └── style.css                    → All styling, shared across every page
-└── js/
-    ├── downloads.js                   → Reads apps.json and builds the download cards
-    └── products.js                     → Fills in live app counts on the Products page
+data/
+├── pixelated/
+│   ├── manifest.json    ← list of apps (Jot, FileFlow, Lens, Egypt Academy...)
+│   └── files/            ← drop the actual .exe/.AppImage/.zip files here
+├── sedico13/
+│   ├── manifest.json    ← PixelOS builds (ISOs)
+│   └── files/            ← drop the .iso file here
+├── pixelated-studios/
+│   ├── manifest.json    ← games
+│   └── files/            ← drop game installers/builds here
+└── themes/
+    └── manifest.json     ← themes for the Pixel Web Store (see below)
 ```
 
-## How to update things
-
-### The logo
-The logo is now built directly in code (inline SVG) instead of a cropped
-image, so it renders crisp and perfectly framed at every size — nav, footer,
-and the big hero version. `assets/icon/logo.svg` holds a copy of it for
-reference. The only place a PNG is still used is the browser tab favicon
-(`assets/icon/logo.png`), since favicons need a raster format — replace that
-file if you want a different tab icon.
-
-If you want to change the logo's look (colors, shape), open `css/style.css`
-and edit the SVG markup inside the `<svg>` blocks in `index.html`,
-`products.html`, `about.html`, `contact.html`, and `downloads/index.html`
-(nav + footer + hero).
-
-### Product categories
-`products.html` currently shows five fixed categories: **Academies, System,
-Utilities, Games, Browsers**. Each category card links to the Downloads page
-filtered to that category (e.g. `downloads/index.html?category=Games`) and
-shows a live "N apps available" count pulled from `data/apps.json`.
-
-To add a new category, duplicate one of the `.cat-card` blocks in
-`products.html`, give it a new icon/name, and add a matching entry to the
-`categoryIds` map in `js/products.js`.
-
-### Add a new app / change download links
-Open `data/apps.json` and add a new entry, e.g.:
-
+**To add a new file (app, ISO, or game):**
+1. Drop the real file into that brand's `files/` folder — e.g. `data/sedico13/files/pixelos-1.0.iso`.
+2. Open that brand's `manifest.json` and add an entry pointing at it:
 ```json
 {
-  "id": "my-new-app",
-  "name": "My New App",
-  "description": "A short one-line description.",
-  "category": "Academies",
+  "id": "pixelos",
+  "name": "PixelOS",
+  "description": "The first public build of PixelOS.",
+  "category": "System",
   "version": "1.0.0",
-  "icon": "assets/app-icons/my-new-app.png",
+  "icon": "assets/app-icons/pixelos.png",
   "downloads": {
-    "windows": "https://yoursite.com/downloads/my-new-app.exe",
-    "linux": "https://yoursite.com/downloads/my-new-app.AppImage",
-    "portable": "https://yoursite.com/downloads/my-new-app-portable.zip",
-    "lite": "https://yoursite.com/downloads/my-new-app-lite.zip"
+    "iso": "data/sedico13/files/pixelos-1.0.iso"
   }
 }
 ```
+3. Save — it appears automatically on that brand's downloads section (Downloads page for Pixelated, the downloads section on the Sedico13 page for PixelOS, or the Studios page for games) and in the Pixel Web Store. No HTML editing needed.
 
-The `"category"` value must exactly match one of the five categories:
-`Academies`, `System`, `Utilities`, `Games`, `Browsers` — that's how the
-Products page count and filter links find it.
+Supported download keys: `windows`, `linux`, `mac`, `portable`, `lite`, `iso` — each renders its own labeled button automatically.
 
-Drop the matching icon into `assets/app-icons/`. Any of the four download keys
-can be left out if that build doesn't exist yet — the button just won't show.
-The Downloads page rebuilds itself automatically from this file — no HTML editing needed.
+## Pixel Web Store (`store.html`)
 
-### Edit About / Contact text
-Just edit the text directly inside `about.html` / `contact.html`.
+Browses all three brands' manifests in one place, with a brand filter
+(All / Pixelated / Sedico13 / Studios). Also has a **Themes** tab.
 
-## Important: run this through a local server
+## Per-app theme system
 
-The Downloads page loads `data/apps.json` using JavaScript's `fetch()`, which
-browsers block when you open the HTML file directly (`file://...`). To view it
-locally, run a simple server from the project folder:
+Each Pixelated app (Jot, FileFlow, Lens) has its own theme system with a
+settings gear icon, storing the chosen theme under its own localStorage
+key so themes never leak between apps:
 
+- Jot → `pixelated_notes_theme`
+- FileFlow → `pixelated_converter_theme`
+- Lens → `pixelated_imagetools_theme`
+
+**Themes added through the Pixel Web Store** are listed in
+`data/themes/manifest.json`. Each entry is tagged to exactly one app via
+its `"app"` field (`jot`, `fileflow`, or `lens`) and only shows up in that
+app's section of the Store. Clicking "Set as theme" writes the choice to
+that app's own localStorage key — opening the app on the same device/browser
+will already have it applied.
+
+**To add a new theme:** add an entry to `data/themes/manifest.json`:
+```json
+{
+  "id": "jot-my-theme",
+  "name": "My Theme",
+  "app": "jot",
+  "appName": "Jot",
+  "description": "One line about the vibe.",
+  "preview": { "bg":"#000000", "accent1":"#fff", "accent2":"#fff", "accent3":"#fff" },
+  "vars": { "--bg":"#000000","--panel":"#0d0d0d","--panel2":"#161616","--border":"#242424","--text":"#ffffff","--dim":"#999999","--accent1":"#fff","--accent2":"#fff","--accent3":"#fff" }
+}
+```
+No app code changes needed — apps read unrecognized theme IDs from a shared
+`pixelated_store_themes` localStorage entry that the Store writes to.
+
+## Running locally
+
+The site uses `fetch()` for manifests, so it needs a local server (not
+`file://`):
 ```bash
 python3 -m http.server 8000
 ```
-
-Then open `http://localhost:8000` in your browser. Once you upload the site to
-real hosting (Netlify, Vercel, GitHub Pages, your own server, etc.), it will
-work normally with no extra setup.
-
-## Contact form
-
-The contact form on `contact.html` is currently a placeholder (it just shows
-an alert). To make it actually send you messages, connect it to a service like
-Formspree, EmailJS, or your own backend endpoint.
+Then open `http://localhost:8000`.

@@ -1,18 +1,23 @@
-// Loads data/apps.json and fills in the "N apps available" text
-// on each category card in products.html. Category names must match
-// the "category" field used in apps.json entries.
+// Loads data/pixelated/manifest.json and data/pixelated-studios/manifest.json
+// and fills in the "N apps available" text on each category card in
+// products.html. Category names must match the "category" field used
+// in each manifest's entries.
 
 async function loadCategoryCounts() {
   try {
-    const res = await fetch("data/apps.json");
-    if (!res.ok) throw new Error("Failed to load apps.json");
-    const apps = await res.json();
+    const [pixelatedRes, studiosRes] = await Promise.all([
+      fetch("data/pixelated/manifest.json"),
+      fetch("data/pixelated-studios/manifest.json")
+    ]);
+    const apps = pixelatedRes.ok ? await pixelatedRes.json() : [];
+    const games = studiosRes.ok ? await studiosRes.json() : [];
 
     const counts = {};
     apps.forEach(app => {
       const cat = app.category || "Uncategorized";
       counts[cat] = (counts[cat] || 0) + 1;
     });
+    counts["Games"] = games.length;
 
     const categoryIds = {
       "Academies": "count-academies",

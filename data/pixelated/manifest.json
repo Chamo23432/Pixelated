@@ -1,0 +1,58 @@
+[
+  {
+    "id": "jot",
+    "name": "Jot",
+    "description": "A fast, flexible notes app with folders, tags, checklists, and markdown preview.",
+    "category": "Utilities",
+    "version": "1.0.0",
+    "icon": "assets/app-icons/jot.png",
+    "downloads": {
+      "windows": "data/pixelated/files/jot-1.0.0.exe",
+      "linux": "data/pixelated/files/jot-1.0.0.AppImage",
+      "portable": "data/pixelated/files/jot-1.0.0-portable.zip",
+      "lite": "data/pixelated/files/jot-1.0.0-lite.zip"
+    }
+  },
+  {
+    "id": "fileflow",
+    "name": "FileFlow",
+    "description": "Convert files, batch-process images, and more — a full file conversion toolkit.",
+    "category": "Utilities",
+    "version": "1.0.0",
+    "icon": "assets/app-icons/fileflow.png",
+    "downloads": {
+      "windows": "data/pixelated/files/fileflow-1.0.0.exe",
+      "linux": "data/pixelated/files/fileflow-1.0.0.AppImage",
+      "portable": "data/pixelated/files/fileflow-1.0.0-portable.zip",
+      "lite": "data/pixelated/files/fileflow-1.0.0-lite.zip"
+    }
+  },
+  {
+    "id": "lens",
+    "name": "Lens",
+    "description": "Resize, crop, filter, and batch-edit images with instant preview.",
+    "category": "Utilities",
+    "version": "1.0.0",
+    "icon": "assets/app-icons/lens.png",
+    "downloads": {
+      "windows": "data/pixelated/files/lens-1.0.0.exe",
+      "linux": "data/pixelated/files/lens-1.0.0.AppImage",
+      "portable": "data/pixelated/files/lens-1.0.0-portable.zip",
+      "lite": "data/pixelated/files/lens-1.0.0-lite.zip"
+    }
+  },
+  {
+    "id": "egypt-academy",
+    "name": "Egypt Academy",
+    "description": "An educational platform built to make learning clearer, faster, and more engaging.",
+    "category": "Academies",
+    "version": "1.0.0",
+    "icon": "assets/app-icons/egypt-academy.png",
+    "downloads": {
+      "windows": "data/pixelated/files/egypt-academy-1.0.0.exe",
+      "linux": "data/pixelated/files/egypt-academy-1.0.0.AppImage",
+      "portable": "data/pixelated/files/egypt-academy-1.0.0-portable.zip",
+      "lite": "data/pixelated/files/egypt-academy-1.0.0-lite.zip"
+    }
+  }
+]
