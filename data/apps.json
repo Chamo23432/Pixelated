@@ -1,0 +1,16 @@
+[
+  {
+    "id": "egypt-academy",
+    "name": "Egypt Academy",
+    "description": "An educational platform built to make learning clearer, faster, and more engaging.",
+    "category": "Academies",
+    "version": "1.0.0",
+    "icon": "assets/app-icons/egypt-academy.png",
+    "downloads": {
+      "windows": "https://example.com/downloads/egypt-academy-1.0.0.exe",
+      "linux": "https://example.com/downloads/egypt-academy-1.0.0.AppImage",
+      "portable": "https://example.com/downloads/egypt-academy-1.0.0-portable.zip",
+      "lite": "https://example.com/downloads/egypt-academy-1.0.0-lite.zip"
+    }
+  }
+]
