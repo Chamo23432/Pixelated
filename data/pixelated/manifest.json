@@ -16,7 +16,7 @@
   {
     "id": "fileflow",
     "name": "FileFlow",
-    "description": "Convert files, batch-process images, and more — a full file conversion toolkit.",
+    "description": "Convert files, batch-process images, and more \u2014 a full file conversion toolkit.",
     "category": "Utilities",
     "version": "1.0.0",
     "icon": "assets/app-icons/fileflow.png",
@@ -53,6 +53,34 @@
       "linux": "data/pixelated/files/egypt-academy-1.0.0.AppImage",
       "portable": "data/pixelated/files/egypt-academy-1.0.0-portable.zip",
       "lite": "data/pixelated/files/egypt-academy-1.0.0-lite.zip"
+    }
+  },
+  {
+    "id": "calculator",
+    "name": "Calculator",
+    "description": "A clean calculator with standard and scientific modes, plus calculation history.",
+    "category": "Utilities",
+    "version": "1.0.0",
+    "icon": "assets/app-icons/calculator.png",
+    "downloads": {
+      "windows": "data/pixelated/files/calculator-1.0.0.exe",
+      "linux": "data/pixelated/files/calculator-1.0.0.AppImage",
+      "portable": "data/pixelated/files/calculator-1.0.0-portable.zip",
+      "lite": "data/pixelated/files/calculator-1.0.0-lite.zip"
+    }
+  },
+  {
+    "id": "clock",
+    "name": "Clock",
+    "description": "World clock, stopwatch, timer, and alarms in one clean app.",
+    "category": "Utilities",
+    "version": "1.0.0",
+    "icon": "assets/app-icons/clock.png",
+    "downloads": {
+      "windows": "data/pixelated/files/clock-1.0.0.exe",
+      "linux": "data/pixelated/files/clock-1.0.0.AppImage",
+      "portable": "data/pixelated/files/clock-1.0.0-portable.zip",
+      "lite": "data/pixelated/files/clock-1.0.0-lite.zip"
     }
   }
 ]

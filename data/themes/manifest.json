@@ -11,7 +11,7 @@
       "accent2": "#ff9ecb",
       "accent3": "#7dd3fc"
     },
-    "downloadUrl": "assets/individual-themes/jot/jot-anime.json"
+    "downloadUrl": "assets/theme-packages/jot/jot-anime.pixeltheme"
   },
   {
     "id": "jot-forest",
@@ -25,7 +25,7 @@
       "accent2": "#22c55e",
       "accent3": "#a3e635"
     },
-    "downloadUrl": "assets/individual-themes/jot/jot-forest.json"
+    "downloadUrl": "assets/theme-packages/jot/jot-forest.pixeltheme"
   },
   {
     "id": "jot-future",
@@ -39,7 +39,7 @@
       "accent2": "#0080ff",
       "accent3": "#7b2fff"
     },
-    "downloadUrl": "assets/individual-themes/jot/jot-future.json"
+    "downloadUrl": "assets/theme-packages/jot/jot-future.pixeltheme"
   },
   {
     "id": "jot-lavender",
@@ -53,7 +53,7 @@
       "accent2": "#a78bfa",
       "accent3": "#8b5cf6"
     },
-    "downloadUrl": "assets/individual-themes/jot/jot-lavender.json"
+    "downloadUrl": "assets/theme-packages/jot/jot-lavender.pixeltheme"
   },
   {
     "id": "jot-mono",
@@ -67,7 +67,7 @@
       "accent2": "#cccccc",
       "accent3": "#999999"
     },
-    "downloadUrl": "assets/individual-themes/jot/jot-mono.json"
+    "downloadUrl": "assets/theme-packages/jot/jot-mono.pixeltheme"
   },
   {
     "id": "jot-ocean",
@@ -81,7 +81,7 @@
       "accent2": "#06b6d4",
       "accent3": "#0891b2"
     },
-    "downloadUrl": "assets/individual-themes/jot/jot-ocean.json"
+    "downloadUrl": "assets/theme-packages/jot/jot-ocean.pixeltheme"
   },
   {
     "id": "jot-sunset",
@@ -95,7 +95,7 @@
       "accent2": "#ff6b35",
       "accent3": "#e63946"
     },
-    "downloadUrl": "assets/individual-themes/jot/jot-sunset.json"
+    "downloadUrl": "assets/theme-packages/jot/jot-sunset.pixeltheme"
   },
   {
     "id": "fileflow-crimson",
@@ -109,7 +109,7 @@
       "accent2": "#ef4444",
       "accent3": "#dc2626"
     },
-    "downloadUrl": "assets/individual-themes/fileflow/fileflow-crimson.json"
+    "downloadUrl": "assets/theme-packages/fileflow/fileflow-crimson.pixeltheme"
   },
   {
     "id": "fileflow-forest",
@@ -123,7 +123,7 @@
       "accent2": "#22c55e",
       "accent3": "#a3e635"
     },
-    "downloadUrl": "assets/individual-themes/fileflow/fileflow-forest.json"
+    "downloadUrl": "assets/theme-packages/fileflow/fileflow-forest.pixeltheme"
   },
   {
     "id": "fileflow-ice",
@@ -137,7 +137,7 @@
       "accent2": "#38bdf8",
       "accent3": "#0ea5e9"
     },
-    "downloadUrl": "assets/individual-themes/fileflow/fileflow-ice.json"
+    "downloadUrl": "assets/theme-packages/fileflow/fileflow-ice.pixeltheme"
   },
   {
     "id": "fileflow-industrial",
@@ -151,7 +151,7 @@
       "accent2": "#f59e0b",
       "accent3": "#d97706"
     },
-    "downloadUrl": "assets/individual-themes/fileflow/fileflow-industrial.json"
+    "downloadUrl": "assets/theme-packages/fileflow/fileflow-industrial.pixeltheme"
   },
   {
     "id": "fileflow-mint",
@@ -165,7 +165,7 @@
       "accent2": "#10b981",
       "accent3": "#059669"
     },
-    "downloadUrl": "assets/individual-themes/fileflow/fileflow-mint.json"
+    "downloadUrl": "assets/theme-packages/fileflow/fileflow-mint.pixeltheme"
   },
   {
     "id": "fileflow-mono",
@@ -179,7 +179,7 @@
       "accent2": "#cccccc",
       "accent3": "#999999"
     },
-    "downloadUrl": "assets/individual-themes/fileflow/fileflow-mono.json"
+    "downloadUrl": "assets/theme-packages/fileflow/fileflow-mono.pixeltheme"
   },
   {
     "id": "lens-arctic",
@@ -193,7 +193,7 @@
       "accent2": "#38bdf8",
       "accent3": "#0ea5e9"
     },
-    "downloadUrl": "assets/individual-themes/lens/lens-arctic.json"
+    "downloadUrl": "assets/theme-packages/lens/lens-arctic.pixeltheme"
   },
   {
     "id": "lens-darkroom",
@@ -207,7 +207,7 @@
       "accent2": "#e63939",
       "accent3": "#c92a2a"
     },
-    "downloadUrl": "assets/individual-themes/lens/lens-darkroom.json"
+    "downloadUrl": "assets/theme-packages/lens/lens-darkroom.pixeltheme"
   },
   {
     "id": "lens-gold",
@@ -221,7 +221,7 @@
       "accent2": "#f59e0b",
       "accent3": "#d97706"
     },
-    "downloadUrl": "assets/individual-themes/lens/lens-gold.json"
+    "downloadUrl": "assets/theme-packages/lens/lens-gold.pixeltheme"
   },
   {
     "id": "lens-light",
@@ -235,7 +235,7 @@
       "accent2": "#3b6bff",
       "accent3": "#8b5cf6"
     },
-    "downloadUrl": "assets/individual-themes/lens/lens-light.json"
+    "downloadUrl": "assets/theme-packages/lens/lens-light.pixeltheme"
   },
   {
     "id": "lens-mono",
@@ -249,7 +249,7 @@
       "accent2": "#cccccc",
       "accent3": "#999999"
     },
-    "downloadUrl": "assets/individual-themes/lens/lens-mono.json"
+    "downloadUrl": "assets/theme-packages/lens/lens-mono.pixeltheme"
   },
   {
     "id": "lens-violet",
@@ -263,6 +263,90 @@
       "accent2": "#a855f7",
       "accent3": "#7c3aed"
     },
-    "downloadUrl": "assets/individual-themes/lens/lens-violet.json"
+    "downloadUrl": "assets/theme-packages/lens/lens-violet.pixeltheme"
+  },
+  {
+    "id": "calculator-neon",
+    "name": "Neon Grid",
+    "app": "calculator",
+    "appName": "Calculator",
+    "description": "Electric purple on black, calculator-style",
+    "preview": {
+      "bg": "#07030d",
+      "accent1": "#c084fc",
+      "accent2": "#a855f7",
+      "accent3": "#ec4899"
+    },
+    "downloadUrl": "assets/theme-packages/calculator/calculator-neon.pixeltheme"
+  },
+  {
+    "id": "calculator-mono",
+    "name": "Monochrome",
+    "app": "calculator",
+    "appName": "Calculator",
+    "description": "Pure grayscale, zero distractions",
+    "preview": {
+      "bg": "#000000",
+      "accent1": "#ffffff",
+      "accent2": "#cccccc",
+      "accent3": "#999999"
+    },
+    "downloadUrl": "assets/theme-packages/calculator/calculator-mono.pixeltheme"
+  },
+  {
+    "id": "calculator-retro",
+    "name": "Retro LCD",
+    "app": "calculator",
+    "appName": "Calculator",
+    "description": "Green LCD-inspired look",
+    "preview": {
+      "bg": "#050805",
+      "accent1": "#7fff7f",
+      "accent2": "#4ade80",
+      "accent3": "#22c55e"
+    },
+    "downloadUrl": "assets/theme-packages/calculator/calculator-retro.pixeltheme"
+  },
+  {
+    "id": "clock-midnight",
+    "name": "Midnight",
+    "app": "clock",
+    "appName": "Clock",
+    "description": "Deep indigo for late nights",
+    "preview": {
+      "bg": "#04050d",
+      "accent1": "#818cf8",
+      "accent2": "#6366f1",
+      "accent3": "#4f46e5"
+    },
+    "downloadUrl": "assets/theme-packages/clock/clock-midnight.pixeltheme"
+  },
+  {
+    "id": "clock-sunrise",
+    "name": "Sunrise",
+    "app": "clock",
+    "appName": "Clock",
+    "description": "Warm morning oranges",
+    "preview": {
+      "bg": "#0d0805",
+      "accent1": "#fdba74",
+      "accent2": "#fb923c",
+      "accent3": "#f97316"
+    },
+    "downloadUrl": "assets/theme-packages/clock/clock-sunrise.pixeltheme"
+  },
+  {
+    "id": "clock-mono",
+    "name": "Monochrome",
+    "app": "clock",
+    "appName": "Clock",
+    "description": "Pure grayscale, zero distractions",
+    "preview": {
+      "bg": "#000000",
+      "accent1": "#ffffff",
+      "accent2": "#cccccc",
+      "accent3": "#999999"
+    },
+    "downloadUrl": "assets/theme-packages/clock/clock-mono.pixeltheme"
   }
 ]
